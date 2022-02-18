@@ -1,3 +1,5 @@
+- .. classic try/catch without promises
+
 - x create getId: returns Promise with resolve, random id 1-2
 - x consume with app1 .then() syntax
 - x getId: add if 0 then reject and handle in app1 with .catch()
