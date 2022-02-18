@@ -1,17 +1,18 @@
-const getMessageSlowly = () => {
+const getId = () => {
 	return new Promise(resolve => {
 		setTimeout(() => {
-			resolve('Server is running.')
+			const id = Math.floor(Math.random() * 2) + 1;
+			resolve(id)
 		}, 2000);
 	});
 };
 
 // call with .then
 const app1 = () => {
-	console.log('getting message...');
-	getMessageSlowly()
-		.then((message) => {
-			console.log(`The message was: ${message}`);
+	console.log('getting id...');
+	getId()
+		.then((id) => {
+			console.log(`The id is: ${id}`);
 		})
 };
 
