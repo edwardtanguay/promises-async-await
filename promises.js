@@ -35,7 +35,7 @@ const app1 = () => {
 		.then(id => {
 			console.log(`The id is: ${id}`);
 			console.log('getting employee...');
-			getEmployee(3)
+			getEmployee(id)
 				.then(employee => {
 					console.log(`Employee is: ${employee.name}`);
 				})
@@ -47,8 +47,25 @@ const app1 = () => {
 			console.log(`ERROR: ${error}`);
 		})
 };
+app1();
 
 // call with async/await
-
-
-app1();
+const app2 = async () => {
+	console.log('getting id...');
+	try {
+		const id = await getId();
+		console.log(`ID is: ${id}`);
+		console.log('getting employee...');
+		try {
+			const employee = await getEmployee(id);
+			console.log(`Employee is: ${employee.name}`);
+		}
+		catch (error) {
+			console.log(`ERROR: ${error}`);
+		}
+	}
+	catch (error) {
+		console.log(`ERROR: ${error}`);
+	}
+}
+// app2();

@@ -2,5 +2,6 @@
 - x consume with app1 .then() syntax
 - x getId: add if 0 then reject and handle in app1 with .catch()
 - x make getEmployee without promise
-- .. add promise to getEmployee and consume
-- use id to look up name
+- x add promise to getEmployee and consume
+- x consume with async/await, but get error on error
+- x handle error async/await style
