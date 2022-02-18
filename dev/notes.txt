@@ -1,4 +1,6 @@
-- .. classic try/catch without promises
+- x classic try/catch without promises
+
+- .. make callback for getId()
 
 - x create getId: returns Promise with resolve, random id 1-2
 - x consume with app1 .then() syntax
